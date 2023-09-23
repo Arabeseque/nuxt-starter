@@ -24,5 +24,11 @@ export default defineNuxtConfig({
     '/api/**': { cors: true },
     // Redirects legacy urls
     '/old-page': { redirect: '/new-page' }
-  }
+  },
+
+  // Nuxt modules are now build-time-only, and the buildModules property used in Nuxt 2 is deprecated in favor of modules.
+  // 类似在 main.ts 中全局导入
+  modules: [
+    '@formkit/auto-animate/nuxt'
+  ]
 })

@@ -1,12 +1,19 @@
-<script setup lang="ts">
-const { data: dataFromApi } = await useFetch('/api/hello/nuxt')
-
+<script setup>
+import { ref } from 'vue'
+/**
+ * @description: https://auto-animate.formkit.com/#usage-vue
+ */
+const items = ref(["😏", "😐", "😑", "😒", "😕"])
+function removeItem(toRemove) {
+  items.value = items.value.filter((item) => item !== toRemove)
+}
 </script>
 
-
 <template>
-  <div>
-    <!-- <NuxtWelcome /> -->
-    {{ dataFromApi }}
-  </div>
+  <h5>Click emojis to remove them.</h5>
+  <ul v-auto-animate>
+    <li v-for="item in items" :key="item" @click="removeItem(item)">
+      {{ item }}
+    </li>
+  </ul>
 </template>
