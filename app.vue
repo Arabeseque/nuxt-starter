@@ -1,5 +1,12 @@
+<script setup lang="ts">
+const { data: dataFromApi } = await useFetch('/api/hello/nuxt')
+
+</script>
+
+
 <template>
   <div>
-    <NuxtWelcome />
+    <!-- <NuxtWelcome /> -->
+    {{ dataFromApi }}
   </div>
 </template>
