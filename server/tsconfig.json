@@ -1,3 +1,4 @@
 {
+  // To improve clarity within your IDE between the auto-imports from 'nitro' and 'vue', you can add a ~/server/tsconfig.json with the following content:
   "extends": "../.nuxt/tsconfig.server.json"
 }
