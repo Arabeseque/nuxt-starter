@@ -10,10 +10,15 @@ function removeItem(toRemove) {
 </script>
 
 <template>
-  <h5>Click emojis to remove them.</h5>
-  <ul v-auto-animate>
-    <li v-for="item in items" :key="item" @click="removeItem(item)">
-      {{ item }}
-    </li>
-  </ul>
+  <div>
+    <h5 class="font-poppins">Click emojis to remove them.</h5>
+    <ul v-auto-animate class="flex gap-2">
+      <!-- <div class="text-6xl">Hello !</div> -->
+      <li v-for="item in items" :key="item" @click="removeItem(item)">
+        <div class="border border-shadow rounded-md">
+          {{ item }}
+        </div>
+      </li>
+    </ul>
+  </div>
 </template>

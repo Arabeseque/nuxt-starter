@@ -30,5 +30,17 @@ export default defineNuxtConfig({
   // 类似在 main.ts 中全局导入
   modules: [
     '@formkit/auto-animate/nuxt'
-  ]
+  ],
+
+  // https://nuxt.com/docs/api/configuration/nuxt-config
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
+
+  css: ['~/assets/css/main.css']
 })
+
+
